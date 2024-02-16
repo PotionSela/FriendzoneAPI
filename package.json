@@ -1,0 +1,31 @@
+{
+  "name": "friendzone-api",
+  "version": "1.0.0",
+  "description": "module18-challenge - mongoose back-end assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js",
+    "seed": "node utils/seed"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^7.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PotionSela/FriendzoneAPI.git"
+  },
+  "keywords": [
+    "mongoose"
+  ],
+  "author": "gisela mata",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PotionSela/FriendzoneAPI/issues"
+  },
+  "homepage": "https://github.com/PotionSela/FriendzoneAPI#readme"
+}
