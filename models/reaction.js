@@ -24,4 +24,5 @@ const reactionSchema = new Schema (
         },
     });
 
+    // Exporting reactionSchema
     module.exports = reactionSchema;
