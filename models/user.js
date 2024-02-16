@@ -1,3 +1,4 @@
+// Requiring Mongoose
 const { Schema } = require('mongoose');
 
 const userSchema = new Schema (
@@ -20,12 +21,15 @@ const userSchema = new Schema (
         }],
     },
     {
+        // Configuring Mongoose to include virtual properties
         toJSON: {
             virtuals: true
         },
+        // Telling Mongoose to not include the 'id' field in the JSON rep
         id: false
     });
 
+    // Implement friendCount in the User model by using the virtual() method on the userSchema
     userSchema.virtual('friendCount').get(function() {
         return this.friends.length;
     });
