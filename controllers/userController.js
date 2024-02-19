@@ -45,4 +45,14 @@ module.exports = {
             res.status(400).json(err);
         }
     },
+    // Delete route to remove user by its _Id
+    async deleteUser(req, res) {
+        try {
+            const user = await User.findByIdAndDelete(req.params.userId);
+            // Remove a user's associated thoughts when deleted
+            res.json(user);
+        } catch (err) {
+            res.status(400).json(err);
+        }
+    },
 }
