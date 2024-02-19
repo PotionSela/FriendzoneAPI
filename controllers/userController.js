@@ -59,7 +59,14 @@ module.exports = {
     // Post to add a new friend to a user's friend list
     async addFriend(req, res) {
         try {
-            const user = await User.findByIdAndDelete(req.params.userId, { $addToSet: { friends: req.params.friendId } }, { new: true } );
+            const user = await User.findByIdAndDelete(req.params.userId, 
+                { _id: req.params.friendId },
+                { $addToSet: { friends: req.params.friendId } }, 
+                { new: true } );
+
+                if (!user) {
+                    return res.status(400).json({ message: 'No friend found with that Id!'});
+                }
             res.json(user);
         } catch (err) {
             res.status(400).json(err);
