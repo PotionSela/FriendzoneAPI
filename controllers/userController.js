@@ -55,10 +55,15 @@ module.exports = {
     // Delete route to remove user by its _Id
     async deleteUser(req, res) {
         try {
-            const user = await User.findByIdAndDelete(req.params.userId);
+            const user = await User.findOneAndDelete({ _id: req.params.userId });
+            
+            if (!user) {
+                return res.status(400).json({ message: "No user with that Id!" });
+            }
+
             // Remove a user's associated thoughts when deleted
             await Thought.deleteMany({ _id: { $in: user.thoughts} });
-            res.json(user);
+            return res.status(400).json({ message: "User and associated thoughts deleted!" });
         } catch (err) {
             console.log(err);
             res.status(400).json(err);
@@ -68,15 +73,15 @@ module.exports = {
     // Post to add a new friend to a user's friend list
     async addFriend(req, res) {
         try {
-            const user = await User.findByIdAndDelete(
-                req.params.userId, 
+            const friend = await User.findOneAndUpdate(
+                { _id: req.params.userId }, 
                 { $addToSet: { friends: req.params.friendId } }, 
                 { new: true } );
 
-                if (!user) {
+                if (!friend) {
                     return res.status(400).json({ message: 'No friend found with that Id!'});
                 }
-            res.json(user);
+            return res.status(400).json(friend);
         } catch (err) {
             console.log(err);
             res.status(400).json(err);
@@ -86,16 +91,16 @@ module.exports = {
     // Remove friend from a user
     async removeFriend(req, res) {
         try {
-            const user = await User.findOneAndUpdate(
-                req.params.userId,
+            const friend = await User.findOneAndUpdate(
+                { _id: req.params.userId },
                 { $pull: { friends: req.params.friendId} },
                 { new: true }
             );
             
-            if (!user) {
-                return res.status(400).json( { message: 'No friend with that Id! '});
+            if (!friend) {
+                return res.status(400).json( { message: 'No friend with that Id! Please check the Id!'});
             }
-            res.json(user);
+            return res.status(400).json(friend);
         } catch (err) {
             console.log(err);
             res.status(500).json(err);
