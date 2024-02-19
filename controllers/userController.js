@@ -2,10 +2,11 @@
 const { User, Thought } = require('../models');
 
 module.exports = {
-    // Get all users
+    // Get all users by id
     async getUser(req, res) {
         try {
-            const user = await User.find().populate('thought');
+            // Get Id, and populate thought and friend data
+            const user = await User.find().populate('thought').populate('friends');
             res.json(user);
         } catch (err) {
             res.status(500).json(err);
