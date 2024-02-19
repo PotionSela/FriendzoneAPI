@@ -9,6 +9,7 @@ module.exports = {
             const users = await User.find().populate('thought').populate('friends');
             res.json(users);
         } catch (err) {
+            console.log(err);
             res.status(500).json(err);
         }
     },
@@ -24,6 +25,7 @@ module.exports = {
             }
             res.json(user);
         } catch (err) {
+            console.log(err);
             res.status(500).json(err);
         }
     },
@@ -45,6 +47,7 @@ module.exports = {
             const user = await User.findByIdAndUpdate(req.params.userId, req.body, { new: true });
             res.json(user);
         } catch (err) {
+            console.log(err);
             res.status(400).json(err);
         }
     },
@@ -57,6 +60,7 @@ module.exports = {
             await Thought.deleteMany({ _id: { $in: user.thoughts} });
             res.json(user);
         } catch (err) {
+            console.log(err);
             res.status(400).json(err);
         }
     },
@@ -74,6 +78,7 @@ module.exports = {
                 }
             res.json(user);
         } catch (err) {
+            console.log(err);
             res.status(400).json(err);
         }
     },
@@ -92,6 +97,7 @@ module.exports = {
             }
             res.json(user);
         } catch (err) {
+            console.log(err);
             res.status(500).json(err);
         }
     },
