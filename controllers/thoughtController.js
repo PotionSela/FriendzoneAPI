@@ -1,5 +1,5 @@
 // Importing Thought and User models
-const { Thought, User } = require('../models');
+const { User, Thought } = require('../models');
 
 module.exports = {
     // Get all thoughts
