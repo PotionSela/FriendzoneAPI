@@ -59,3 +59,8 @@ This application leverages Node.js (v16.19.1), Express.js (v4.18.2), JavaScript,
 
 ---
 
+## Features
+The features of this application include the ability to create users and thoughts, find all the users and their thoughts. Finding a single user and thought, update those users, and the thoughts. And to be able to delete a user/thought. You can add reactions to particular thoughts from their Id's. You can also add friends to users. Once a thought, reaction, or friend is added to the database, it will update within the user objects accordingly.
+
+---
+
