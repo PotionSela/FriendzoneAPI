@@ -8,6 +8,8 @@ module.exports = {
             // Get Id
             const users = await User.find();
             res.json(users);
+
+            // If there's a server error, catch it and log it
         } catch (err) {
             console.log(err);
             res.status(500).json(err);
@@ -20,9 +22,12 @@ module.exports = {
             const user = await User.findOne({ _id: req.params.userId });
 
             if (!user) {
+                // If there's no user, return with 400 error message
                 return res.status(400).json({ message: 'No user with that ID!'});
             }
             res.json(user);
+
+            // If there's a server error, catch it and log it
         } catch (err) {
             console.log(err);
             res.status(500).json(err);
@@ -33,7 +38,10 @@ module.exports = {
     async createUser(req, res) {
         try {
             const user = await User.create(req.body);
+            // Successful status
             res.status(200).json(user);
+
+            // Else catch the error and log it
         } catch (err) {
             console.log(err);
             return res.status(500).json(err);
@@ -43,8 +51,11 @@ module.exports = {
     // Update user by user Id
     async updateUser(req, res) {
         try {
+            // Try to find the user by userId
             const user = await User.findByIdAndUpdate(req.params.userId, req.body, { new: true });
             res.json(user);
+
+            // If there's an error, catch it and log it
         } catch (err) {
             console.log(err);
             res.status(400).json(err);
@@ -62,7 +73,9 @@ module.exports = {
 
             // Remove a user's associated thoughts when deleted
             await Thought.deleteMany({ _id: { $in: user.thoughts} });
-            return res.status(400).json({ message: "User and associated thoughts deleted!" });
+            return res.status(200).json({ message: "User and associated thoughts deleted!" });
+
+            // Else catch the error and log it
         } catch (err) {
             console.log(err);
             res.status(400).json(err);
@@ -80,7 +93,10 @@ module.exports = {
                 if (!friend) {
                     return res.status(400).json({ message: 'No friend found with that Id!'});
                 }
-            return res.status(400).json(friend);
+                // Return a successful message
+            return res.status(200).json(friend, { message: "You added a new friend! Exciting! "});
+
+            // Else catch the error and log it
         } catch (err) {
             console.log(err);
             res.status(400).json(err);
@@ -99,7 +115,10 @@ module.exports = {
             if (!friend) {
                 return res.status(400).json( { message: 'No friend with that Id! Please check the Id!'});
             }
-            return res.status(400).json(friend);
+            // Return a successful message
+            return res.status(200).json(friend, { message: "You removed a friend successfully!"});
+
+            // Else catch the error and log it
         } catch (err) {
             console.log(err);
             res.status(500).json(err);
