@@ -54,7 +54,7 @@ This application leverages Node.js (v16.19.1), Express.js (v4.18.2), JavaScript,
     - npm i mongoose
     - npm i nodemon
 6. Next, you will want to make sure you have access to MongoDB by having an account and have MongoDB Compass. These will allow you to interact with the database and visually confirm what changes are being made in the database.
-7. Once you have installed all the dependencies, right click on the server.js file to get to an intergrated terminal, then you can run the command npm start to start the server.
+7. Once you have installed all the dependencies, right click on the server.js file to get to an integrated terminal, then you can run the command npm start to start the server.
 8. Then you can use applications like Insomnia to test each route and their functionality.
 
 ---
@@ -66,6 +66,11 @@ The features of this application include the ability to create users and thought
 
 ## Usage Information
 Right now this application has usage abilities that can be conducted through starting the server with npm start, or node server.js, then going to an application like Insomnia, or Postman and test the different API end points. For more information on starting up the server, MongoDB Compass installation navigate to the Installation section above.
+
+---
+
+## Contribution Guidelines
+If you would like to contribute, this project is open to collaboration. If you choose to do so, open an issue and modify any changes you would like to see on a feature branch and wait for approval before merging to the main branch.
 
 ---
 
