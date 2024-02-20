@@ -32,3 +32,10 @@ Link to live recording [here!](Link)
 
 ---
 
+## Screenshots
+![example](./example)
+![example](./example)
+![example](./example)
+
+---
+
