@@ -64,3 +64,8 @@ The features of this application include the ability to create users and thought
 
 ---
 
+## Usage Information
+Right now this application has usage abilities that can be conducted through starting the server with npm start, or node server.js, then going to an application like Insomnia, or Postman and test the different API end points. For more information on starting up the server, MongoDB Compass installation navigate to the Installation section above.
+
+---
+
