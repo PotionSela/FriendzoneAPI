@@ -7,6 +7,7 @@ FriendzoneAPI is a robust social network API project built using Express.js, Mon
 
 ## Table of Contents
 - [Description](#description)
+- [Live Recording](#live-recording)
 - [Screenshots](#screenshots)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
@@ -15,3 +16,10 @@ FriendzoneAPI is a robust social network API project built using Express.js, Mon
 - [Contribution Guidelines](#contribution-guidelines)
 - [License](#license)
 - [Questions](#questions)
+
+
+---
+
+## Description
+
+This application marks the inception of a full stack social network utilizing MongoDB, Express.js, and Mongoose ODM. It establishes the fundamental CRUD API routes for user management and interaction features like sharing thoughts and managing friend lists. Despite being in its early stages, the integration of MongoDB and middleware routing signifies a crucial starting point for exploring their capabilities. Challenges arose in navigating MongoDB's flexible querying and error handling, particularly in managing data deletion and table joins efficiently. 
