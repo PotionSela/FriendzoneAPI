@@ -28,7 +28,7 @@ This application marks the inception of a full stack social network utilizing Mo
 
 ## Live Recording
 
-Link to live recording [here!](Link)
+Link to live recording [here!](https://drive.google.com/file/d/1xCNYPtLdBvoVuVswV6-BIrJGsG34csuM/view)
 
 ---
 
