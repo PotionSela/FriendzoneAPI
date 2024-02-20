@@ -33,9 +33,9 @@ Link to live recording [here!](Link)
 ---
 
 ## Screenshots
-![example](./example)
-![example](./example)
-![example](./example)
+![get-all-users](./assets/images/get-all-users.png)
+![get-user-by-id](./assets/images/get-user-by-id.png)
+![update-user](./assets/images/update-user.png)
 
 ---
 
