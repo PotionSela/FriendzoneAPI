@@ -80,4 +80,4 @@ There is no License for this project.
 ---
 
 ## Questions
-Have any questions? Click [here](https://github.com/PotionSela?tab=repositories) for my GitHub info! And you can click [here](giselamata27@gmail.com) for my email!
+Have any questions? Click [here](https://github.com/PotionSela?tab=repositories) for my GitHub info! And you can click my email is giselamata27@gmail.com
