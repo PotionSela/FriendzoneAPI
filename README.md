@@ -74,3 +74,8 @@ If you would like to contribute, this project is open to collaboration. If you c
 
 ---
 
+## License
+There is no License for this project.
+
+---
+
