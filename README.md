@@ -40,4 +40,22 @@ Link to live recording [here!](Link)
 ---
 
 ## Technology Used
-This application leverages Node.js (v16.19.1), Express.js (v4.18.2), JavaScript, MongoDB, and Mongoose (v7.2.2). It relies on npm dependencies like express and mongoose, with Nodemon (v2.0.22) for automatic server refreshing during development. Jest (v29.5.0) is included as a devDependency for future unit testing. MongoDB Compass visualizes the database, while Insomnia tests the functionality of routes.
+This application leverages Node.js (v16.19.1), Express.js (v4.18.2), JavaScript, MongoDB, and Mongoose (v7.2.2). It relies on npm dependencies like express and mongoose, with Nodemon (v2.0.9) for automatic server refreshing during development. MongoDB Compass visualizes the database, while Insomnia tests the functionality of routes.
+
+---
+
+## Installation
+1. Clone the repo: git clone https://github.com/PotionSela/FriendzoneAPI.git
+2. Open VS Code, if you don't have it, install it
+3. Using the terminal install node.js v16
+4. Once node.js v16 is installed, in the terminal, use the command npm init -y to initialize and create a package.json
+5. Next, use the terminal to run the command npm i to install the dependencies needed for this application.
+    - npm i express@4.17.1
+    - npm i mongoose
+    - npm i nodemon
+6. Next, you will want to make sure you have access to MongoDB by having an account and have MongoDB Compass. These will allow you to interact with the database and visually confirm what changes are being made in the database.
+7. Once you have installed all the dependencies, right click on the server.js file to get to an intergrated terminal, then you can run the command npm start to start the server.
+8. Then you can use applications like Insomnia to test each route and their functionality.
+
+---
+
