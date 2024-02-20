@@ -9,7 +9,7 @@ module.exports = {
             const users = await User.find();
             res.json(users);
 
-            // If there's a server error, catch it and log it
+            // If there's a server error, catch it and log it 
         } catch (err) {
             console.log(err);
             res.status(500).json(err);
