@@ -39,3 +39,5 @@ Link to live recording [here!](Link)
 
 ---
 
+## Technology Used
+This application leverages Node.js (v16.19.1), Express.js (v4.18.2), JavaScript, MongoDB, and Mongoose (v7.2.2). It relies on npm dependencies like express and mongoose, with Nodemon (v2.0.22) for automatic server refreshing during development. Jest (v29.5.0) is included as a devDependency for future unit testing. MongoDB Compass visualizes the database, while Insomnia tests the functionality of routes.
